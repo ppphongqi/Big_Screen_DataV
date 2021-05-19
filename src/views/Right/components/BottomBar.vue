@@ -77,7 +77,7 @@ export default {
             },
             textStyle: {
               fontSize: 20,
-              fontweight: 600,
+              fontWeight: 600,
               color: '#ffffff',
               rich: {
                 a: {

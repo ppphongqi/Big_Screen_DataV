@@ -222,7 +222,7 @@ export default {
             },
             {
               offset: 1,
-              color: '#00FF00',
+              color: '#32CD32',
             },
             ]),
           },

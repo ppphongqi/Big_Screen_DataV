@@ -25,13 +25,14 @@ export default {
   width: 100%;
   margin-top:.15rem;
   &_title {
-    width:100%;
-    background: linear-gradient(to right, rgb(0,159,248) 0%,rgba(0,0,0, .1) 60%);
+    width:95%;
+    background: linear-gradient(to right, rgb(0,159,248) 0%,rgba(0,0,0, 0) 60%);
     // background: plum;
     font-weight: 600;
     text-align: left;
     padding-left:.1rem;
-    line-height: .45rem;
+    line-height: .35rem;
+    font-size: .2rem;
   }
 }
 </style>
