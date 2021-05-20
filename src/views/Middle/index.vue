@@ -31,7 +31,16 @@
     <Card title="新闻动态" >
       <div class="views">
         <div class="views_left">
-          <img :src="require(`../../assets/views/${meetting}.jpeg`)" />
+          <!-- <img :src="require(`../../assets/views/${meetting}.jpeg`)" />
+          -->
+          <el-carousel :interval="4000" indicator-position="none" class="carousel">
+            <el-carousel-item v-for="item in [0,1,2,3] " :key="item">
+              <!-- <h3>{{ item }}</h3> -->
+              <img
+                :src="require(`../../assets/carousel/${item+1}.jpg`)"
+                alt="" class="carousel_img">
+            </el-carousel-item>
+          </el-carousel>
           <span>第二、三届云南省教育装备展示会衔接会</span>
         </div>
         <div class="views_right">
@@ -71,6 +80,15 @@ export default {
         },
         {
           content: '第三届云南教育装备展示会开幕式',
+        },
+        {
+          content: '第二次云南省教育装备培训高峰论坛2',
+        },
+        {
+          content: '第三次新技术、新产品、新成果发布会3',
+        },
+        {
+          content: '第五届云南教育装备展示会开幕式4',
         },
       ],
       meetting: 'meetting',
