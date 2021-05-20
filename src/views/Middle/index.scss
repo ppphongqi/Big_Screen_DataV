@@ -26,7 +26,7 @@
   }
 }
 .views{
-  height:18vh;
+  height: 20vh;
   width:95%;
   display: flex;
   flex-direction: row;
@@ -62,7 +62,7 @@
     height:100%;
     // background: blue;
     &_items{
-      height:.45rem;
+      height:3vw;
       width:100%;
       display: flex;
       flex-direction: row;
@@ -71,7 +71,7 @@
       background: rgba($color: gray, $alpha: 0.1);
       border: 2px rgba($color: gray, $alpha: 0.2) solid;
       &_img{
-        width:12%;
+        width:14%;
         height: 90%;
         .img_wrapper{
           width: 100%;
