@@ -8,24 +8,18 @@
         </div>
       </div>
     </Card>
-    <Card :title="title" >
-      <div class="view" v-if="!showVideo" >
-        <el-carousel :interval="4000" indicator-position="none" class="carousel">
-          <el-carousel-item v-for="item in [0,1,2,3] " :key="item">
+    <Card title="观展图" >
+      <div class="view">
+        <el-carousel :interval="10000" indicator-position="none" class="carousel">
+          <el-carousel-item v-for="item in [0] " :key="item">
             <!-- <h3>{{ item }}</h3> -->
-            <img :src="require(`../../assets/carousel/${item+1}.jpg`)" alt="" class="carousel_img">
+            <img :src="require(`../../assets/carousel/${item+1}.png`)" alt="" class="carousel_img">
           </el-carousel-item>
         </el-carousel>
         <div class="view_buttons">
-          <a href="#" @click="change">6 号馆</a>
+          <a href="#">6 号馆</a>
           <a href="#">5 号馆</a>
         </div>
-      </div>
-      <div v-else class="view" >
-        <!-- <video autoplay="" preload="none" controls="true">
-            <source src="https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd" type="application/dash+xml">
-        </video> -->
-        <video class="video_main" id="video_main" controls></video>
       </div>
     </Card>
     <Card title="新闻动态" >
@@ -53,7 +47,6 @@
 </template>
 
 <script>
-import * as video from 'dashjs';
 import Card from '../../components/Card.vue';
 import './index.scss';
 
@@ -74,28 +67,7 @@ export default {
         },
       ],
       meetting: 'meetting',
-      title: '观展图',
-      showVideo: false,
-      url: 'https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd',
     };
-  },
-  methods: {
-    change() {
-      this.showVideo = !this.showVideo;
-      if (this.showVideo) {
-        // this.videoInit();
-        setTimeout(() => {
-          this.videoInit();
-        }, 1000);
-      }
-    },
-    videoInit() {
-      this.dash = video.MediaPlayer().create();
-      this.dash.initialize(document.querySelector('#video_main'), this.url, true);
-    },
-  },
-  mounted() {
-
   },
 };
 </script>

@@ -18,7 +18,7 @@
 }
 .view{
   height: 42vh;
-  width:100%;
+  width:95%;
   display: flex;
   flex-direction: column;
   &_buttons{
@@ -62,7 +62,7 @@
     height:100%;
     // background: blue;
     &_items{
-      height:3vw;
+      height:5vh;
       width:100%;
       display: flex;
       flex-direction: row;
